@@ -1,0 +1,22 @@
+<% layout('layouts/boilerplate') %>
+<h1>All Campgrounds</h1>
+
+<%var delayInMilliseconds = 2000;%>
+
+
+
+<ol>
+    <% for(let campground of campgrounds){ %>
+    <%  let i =0; %>
+    <div class="card" style="width: 18rem;">
+        <img src="<%=campground.image%>" class="card-img-top" id="i">
+
+        <div class="card-body">
+            <h5 class="card-title"><%=campground.title%></h5>
+            <p class="card-text"><%=campground.description%></p>
+            <a href="campgrounds/<%=campground._id%>" class="btn btn-primary">Details</a>
+        </div>
+    </div>
+    <%i++%>
+    <%   } %>
+</ol>

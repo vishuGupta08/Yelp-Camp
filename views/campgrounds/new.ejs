@@ -1,0 +1,25 @@
+<% layout('layouts/boilerplate') %>
+
+<form action="/campgrounds" method="POST">
+
+    <div class="row">
+        <div class="col-sm"></div>
+        <div class="col-sm">
+            <h2 class="text-center mb-3">Details of New Camp</h2>
+
+            <div class="mb-2">
+
+                <label class="form-label" for="1">Enter Title:</label>
+                <input class="form-control" type="text" name="campground[title]" id="1" required>
+            </div>
+            <div class="mb-2">
+                <label class="form-label" for="2">Enter Location:</label>
+                <input class="form-control" type="text" name="campground[location]" id="2" required>
+            </div>
+            <div class="d-grid col-4 mx-auto mt-4">
+                <button class="mb-3 btn btn-success ">Submit</button>
+            </div>
+        </div>
+        <div class="col-sm"></div>
+    </div>
+</form>
